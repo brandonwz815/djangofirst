@@ -18,14 +18,14 @@ def home(request):
         "num": num, 
         "some_list": some_list
     }
-    return render(request, "base.html", context) 
+    return render(request, "home.html", context) 
 
-def home2(request):
+def about(request):
     context = {
     }
-    return render(request, "home2.html", context) 
+    return render(request, "about.html", context) 
     
-def home3(request):
+def contact(request):
     context = {
     }
-    return render(request, "home3.html", context) 
+    return render(request, "contact.html", context) 
