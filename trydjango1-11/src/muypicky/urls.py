@@ -21,6 +21,7 @@ from restraunts.views import (
     restraunt_listview,
     RestrauntListView,
     SearchRestrauntListView,
+    RestrauntDetailView
 )
 
 
@@ -28,7 +29,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='home.html')),
     url(r'^restraunts/$', RestrauntListView.as_view()),
-    url(r'^restraunts/(?P<slug>\w+)/$', SearchRestrauntListView.as_view()),
+    # url(r'^restraunts/(?P<slug>\w+)/$', SearchRestrauntListView.as_view()),
+    # url(r'^restraunts/(?P<rest_id>\w+)$', RestrauntDetailView.as_view()),
+    url(r'^restraunts/(?P<pk>\w+)$', RestrauntDetailView.as_view()),
     # url(r'^restraunts/asian/$', AsianFusionRestrauntListView.as_view()),
     url(r'^restraunts/$', RestrauntListView.as_view()),
     url(r'^about/$', TemplateView.as_view(template_name='about.html')),
